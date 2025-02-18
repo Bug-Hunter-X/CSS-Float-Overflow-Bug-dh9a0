@@ -1,0 +1,12 @@
+The following CSS rule is causing unexpected behavior:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+The issue is that when the combined width of multiple `div` elements exceeds the width of their parent container, they will overflow the container, leading to layout problems.
+
+This is due to the use of `float: left` which takes elements out of the normal flow.  The parent container doesn't automatically resize to accommodate the floating children. 
