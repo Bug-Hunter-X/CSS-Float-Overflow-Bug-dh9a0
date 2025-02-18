@@ -1,0 +1,25 @@
+The most common solution is the clearfix technique. This involves adding a clearfix class to the parent container that clears the floats:
+
+```css
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+```
+
+Apply this class to the parent container:
+
+```css
+.parent {
+  width: 500px;
+  .clearfix
+}
+
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+Now, the parent container will automatically resize to accommodate the floated children.
